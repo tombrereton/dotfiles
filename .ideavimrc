@@ -1,0 +1,41 @@
+let mapleader = " "
+
+""" pluings
+set visualbell
+set noerrorbells
+set easymotion
+set surround
+set which-key
+
+""" common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set number
+set hlsearch
+set ignorecase
+set smartcase
+set visualbell
+
+""" idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+
+""" mappings
+nnoremap <SPACE> <Nop>
+map s <Plug>(easymotion-s)
+map <leader><Space> <Action>(SearchEverywhere)
+map <leader>rr <Action>(RenameElement)
+map <leader>rf <Action>(RefactoringMenu)
+
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>e <Action>(GotoNextError)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+map <leader>c <Action>(Stop)
+nmap gh <Action>(ShowHoverInfo)
+
+
+
+
