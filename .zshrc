@@ -13,5 +13,6 @@ alias tree='eza --icons -a --long --tree -I .git'
 alias tred='eza -aD --long --tree -I .git'
 alias pn=pnpm
 alias sourcez='source ~/.zshrc'
+alias sourcet='tmux source ~/.config/tmux/tmux.conf'
 alias vimz='vim ~/dotfiles/.zshrc'
 alias gui=lazygit
