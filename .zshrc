@@ -16,3 +16,8 @@ alias sourcez='source ~/.zshrc'
 alias sourcet='tmux source ~/.config/tmux/tmux.conf'
 alias vimz='vim ~/dotfiles/.zshrc'
 alias gui=lazygit
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
