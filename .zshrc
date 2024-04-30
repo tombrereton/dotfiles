@@ -8,9 +8,9 @@ autoload -Uz compinit && compinit
 alias vim=nvim
 alias ls='eza --icons'
 alias ll='eza --icons -al'
-alias tre='eza --icons -a --long --tree -I .git'
-alias tree='eza --icons -a --long --tree -I .git'
-alias tred='eza -aD --long --tree -I .git'
+alias tre='eza --icons -a --long --tree -I ".git|obj|bin|node_modules"'
+alias tree='eza --icons -a --long --tree -I ".git|obj|bin|node_modules"'
+alias tred='eza -aD --long --tree -I ".git|obj|bin|node_modules"'
 alias pn=pnpm
 alias sourcez='source ~/.zshrc'
 alias sourcet='tmux source ~/.config/tmux/tmux.conf'

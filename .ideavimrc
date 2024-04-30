@@ -1,6 +1,9 @@
 let mapleader = " "
 
-""" pluings
+""" install plugins
+Plug 'tpope/vim-surround'
+
+""" set plugins
 set visualbell
 set noerrorbells
 set easymotion
@@ -24,9 +27,7 @@ set ideastatusicon=gray
 """ mappings
 nnoremap <SPACE> <Nop>
 map s <Plug>(easymotion-s)
-map <leader><Space> <Action>(SearchEverywhere)
-map <leader>rr <Action>(RenameElement)
-map <leader>rf <Action>(RefactoringMenu)
+map <leader>t <Action>(SearchEverywhere)
 
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
@@ -35,6 +36,17 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 map <leader>c <Action>(Stop)
 nmap gh <Action>(ShowHoverInfo)
+
+""" refactoring mappings
+map <leader>rr <Action>(RenameElement)
+map <leader>rf <Action>(RefactoringMenu)
+nmap <leader>rev :action IntroduceVariable<CR>
+vmap <leader>rev :action IntroduceVariable<CR>
+nmap <leader>rem :action ExtractMethod<CR>
+vmap <leader>rem :action ExtractMethod<CR>
+nmap <leader>rm :action Move<CR>
+nmap <leader>ro :action OptimizeImports<CR>
+nmap <leader>rG :action Generate<CR>
 
 
 
