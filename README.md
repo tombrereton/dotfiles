@@ -31,6 +31,13 @@ stow .
 brew bundle dump
 ```
 
+## General Setup
+Add the following text to your `~/.gitconfig`
+```
+[include]
+    path = .gitconfig.dotfiles
+```
+
 ## Linux
 
 Requirements

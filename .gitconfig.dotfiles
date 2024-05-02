@@ -17,3 +17,9 @@
 	# branch delete: This checks out your local master branch and deletes all local branches
 	#                that have already been merged to master
 	brd = !sh -c \"git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d\"
+	grep = grep -Ii
+	gr = grep -Ii
+	lasttag = describe --tags --abbrev=0
+	lt = describe --tags --abbrev=0
+[pull]
+	rebase = true
