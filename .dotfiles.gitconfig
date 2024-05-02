@@ -1,3 +1,0 @@
-[alias]
-	st = status -sb
-	co = checkout

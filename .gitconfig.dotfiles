@@ -1,0 +1,19 @@
+[alias]
+	s = status -sb
+	co = checkout
+    ll = "log --oneline"
+	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+	lc = "config -l"
+	la = "!git config -l | grep alias | cut -c 7-"
+	last = "log -1 HEAD --stat"
+	ap = "add --patch"
+	cm = "commit -m"
+	d = diff
+	d1 = diff HEAD~1 HEAD
+	d2 = diff HEAD~2 HEAD
+	dv = "difftool -t nvimdiff -y"
+	se = "!git rev-list --all | xargs git grep -F"
+	br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	# branch delete: This checks out your local master branch and deletes all local branches
+	#                that have already been merged to master
+	brd = !sh -c \"git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d\"
