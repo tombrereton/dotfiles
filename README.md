@@ -1,7 +1,37 @@
 # Dotfiles
-We use [GNU Stow]()
+We use [GNU Stow]() to symlink files to the home directory. 
+This makes it easier to manage dotfiles such as `.zshrc`, `.vimrc`, etc.
 
-# Linux
+Some dotfiles require programs to be installed follow the instructions below depending on your OS.
+
+## Mac
+[Install Homebrew](https://brew.sh/)
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Add Homebrew Bundle to import/export
+```bash
+brew tap Homebrew/bundle
+```
+Import Brew Bundle
+```bash
+cd ~/dotfiles
+brew bundle
+```
+Install Stow and symlink dotfiles
+```bash
+brew install stow
+cd ~/dotfiles
+stow .
+```
+
+### Exporting Brewfile
+```bash
+brew bundle dump
+```
+
+## Linux
 
 Requirements
 - [Add universe repository:](https://askubuntu.com/questions/148638/how-do-i-enable-the-universe-repository) `sudo add-apt-repository universe`
@@ -14,3 +44,17 @@ Requirements
 - [`sudo apt install stow`](https://www.gnu.org/software/stow/manual/stow.html)
 - [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - [Install dotnet](https://learn.microsoft.com/en-gb/dotnet/core/install/linux-scripted-manual#scripted-install)
+# Most Used Tools
+- Arc
+- Raycast
+- Obsidian
+- Itsycal
+- Bartender
+- Zsh
+- Starship Prompt
+- Orbstack
+- Lazyvim
+- Wezterm
+
+# Notes
+- Cool nerd font: [Iosevka](https://typeof.net/Iosevka/)
