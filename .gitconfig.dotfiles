@@ -23,3 +23,7 @@
 	lt = describe --tags --abbrev=0
 [pull]
 	rebase = true
+[log]
+  	date = relative
+[push]
+    autoSetupRemote = true
