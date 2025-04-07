@@ -32,6 +32,24 @@ function Switch-GitBranch {
     }
 }
 
+function Switch-GitProject {
+    $rootPath = "C:\Users\TB3244"
+    $selectedProject = Get-ChildItem -Path $rootPath -Directory | ForEach-Object {
+        if (Test-Path (Join-Path $_.FullName ".git") -PathType Container) {
+            Write-Output $_.Name
+        }
+    } | fzf
+    
+    if ($selectedProject) {
+        $projectPath = "$rootPath\$selectedProject"
+        Write-Host "Switching to project: $projectPath" -ForegroundColor Cyan
+        Set-Location $projectPath
+    }
+    else {
+        Write-Host "No project selected." -ForegroundColor Yellow
+    }
+}
+
 Set-Alias -Name ls -Value list-icons
 Set-Alias -Name ll -Value list-all
 Set-Alias -Name tree -Value list-tree
@@ -39,4 +57,4 @@ Set-Alias -Name tred -Value list-tred
 Set-Alias -Name tf -Value terraform
 Set-Alias -Name f -Value Open-GitProject
 Set-Alias -Name fb -Value Switch-GitBranch
-
+Set-Alias -Name fp -Value Switch-GitProject
